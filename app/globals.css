@@ -14,22 +14,6 @@
   100% { transform: translateX(-50%); }
 }
 
-@keyframes loomX {
-  0% { transform: translateX(-100%); opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { transform: translateX(100%); opacity: 0; }
-}
-
-@keyframes loomY {
-  0% { transform: translateY(-100%); opacity: 0; }
-  50% { opacity: 0.5; }
-  100% { transform: translateY(100%); opacity: 0; }
-}
-
-@keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
-}
 
 .animate-marquee { 
   display: flex; 
@@ -39,18 +23,6 @@
 
 .animate-marquee:hover { 
   animation-play-state: paused; 
-}
-
-.loom-x { 
-  animation: loomX 3s infinite linear; 
-}
-
-.loom-y { 
-  animation: loomY 4s infinite linear; 
-}
-
-.cursor-blink { 
-  animation: blink 0.8s infinite; 
 }
 
 .layer-shadow { 

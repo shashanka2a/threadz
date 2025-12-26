@@ -9,6 +9,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || "https://threadz.ai"),
   title: "THREADZ - Generative House | Curate Your Perfect Fit",
   description: "Use our Generative AI Studio to build luxury-grade blanks that match your unique aesthetic. From Cyberpunk grit to Botanical minimalism.",
   keywords: ["fashion", "AI", "generative design", "custom clothing", "luxury apparel"],

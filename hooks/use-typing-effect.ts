@@ -31,3 +31,4 @@ export function useTypingEffect(
   return words[index].substring(0, subIndex);
 }
 
+

@@ -32,13 +32,15 @@ export function TshirtDoodle() {
       ref={containerRef}
       className="relative w-64 h-64 md:w-80 md:h-80 opacity-50 dark:opacity-40"
     >
-      <Image
-        src="https://static.vecteezy.com/system/resources/previews/019/478/028/non_2x/colorful-print-t-shirt-doodle-icon-hand-drawn-illustration-vector.jpg"
-        alt="T-Shirt Doodle"
-        fill
-        className="object-contain"
-        priority
-      />
+      <div className="relative w-full h-full">
+        <Image
+          src="https://static.vecteezy.com/system/resources/previews/019/478/028/non_2x/colorful-print-t-shirt-doodle-icon-hand-drawn-illustration-vector.jpg"
+          alt="T-Shirt Doodle"
+          fill
+          className="object-contain remove-bg"
+          priority
+        />
+      </div>
     </div>
   );
 }

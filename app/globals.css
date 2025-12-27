@@ -184,3 +184,13 @@
   box-shadow: 0 4px 6px -1px rgba(0,0,0,0.3), 0 20px 25px -5px rgba(0,0,0,0.2); 
 }
 
+.remove-bg {
+  mix-blend-mode: multiply;
+  filter: contrast(1.2) brightness(1.1);
+}
+
+.dark .remove-bg {
+  mix-blend-mode: screen;
+  filter: contrast(1.2) brightness(0.9) invert(0);
+}
+

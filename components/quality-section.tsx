@@ -49,9 +49,23 @@ export function QualitySection() {
                 Speaks.
               </span>
             </h2>
-            <p className="text-stone-500 dark:text-stone-400 font-light leading-relaxed mb-10">
+            <p className="text-stone-500 dark:text-stone-400 font-light leading-relaxed mb-6">
               No design skills needed. Heavyweight fabric. Perfect oversized fit. Made in India.
             </p>
+            <div className="space-y-3 text-sm">
+              <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400">
+                <span className="text-green-600 dark:text-green-400">✅</span>
+                <span>Soft & Thick: 100% Premium Cotton</span>
+              </div>
+              <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400">
+                <span className="text-green-600 dark:text-green-400">✅</span>
+                <span>Bold Prints: Colors that don't fade after a wash</span>
+              </div>
+              <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400">
+                <span className="text-green-600 dark:text-green-400">✅</span>
+                <span>Sustainable: We only make what you order. No waste.</span>
+              </div>
+            </div>
           </div>
 
           <div className="lg:col-span-8 space-y-6">

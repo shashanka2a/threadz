@@ -125,7 +125,7 @@ export function Footer() {
 
         <div className="flex flex-col md:flex-row justify-between items-center border-t border-stone-50 dark:border-stone-900 pt-8 md:pt-12 pb-0 gap-4 md:gap-6 opacity-40">
           <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-center md:text-left">
-            © 2024 Threadz Generative House.
+            THREADZ™ Custom Clothing. Powered by AI. Made for India.
           </p>
           <div className="flex gap-6 md:gap-8 text-[9px] font-bold uppercase tracking-[0.4em]">
             <Link
@@ -139,6 +139,12 @@ export function Footer() {
               className="hover:text-black dark:hover:text-white transition-colors"
             >
               Terms
+            </Link>
+            <Link
+              href="#"
+              className="hover:text-black dark:hover:text-white transition-colors"
+            >
+              Track Order
             </Link>
           </div>
         </div>

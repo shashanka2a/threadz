@@ -5,7 +5,6 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedIllustration } from "@/components/animated-illustration";
-import { RotatingTshirt } from "@/components/rotating-tshirt";
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -24,30 +23,23 @@ export function Hero() {
         <AnimatedIllustration />
       </div>
 
-      <div className="relative z-10 text-center max-w-6xl mx-auto">
-        <header className="mb-6 flex flex-col md:flex-row items-center justify-center gap-8 md:gap-12">
-          <div className="flex-1">
-            <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-[1.05] tracking-tighter">
-              <span
-                ref={designTextRef}
-                className="inline-block morph-text-design"
-              >
-                You Design.
-              </span>{" "}
-              <br />
-              <span
-                ref={makeTextRef}
-                className="italic font-light text-stone-700 dark:text-stone-300 inline-block morph-text-product"
-              >
-                We Make It.
-              </span>
-            </h1>
-          </div>
-          
-          {/* Rotating T-Shirt on Right */}
-          <div className="flex-shrink-0 opacity-60 dark:opacity-50">
-            <RotatingTshirt />
-          </div>
+      <div className="relative z-10 text-center max-w-4xl">
+        <header className="mb-6">
+          <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-[1.05] tracking-tighter">
+            <span
+              ref={designTextRef}
+              className="inline-block morph-text-design"
+            >
+              You Design.
+            </span>{" "}
+            <br />
+            <span
+              ref={makeTextRef}
+              className="italic font-light text-stone-700 dark:text-stone-300 inline-block morph-text-product"
+            >
+              We Make It.
+            </span>
+          </h1>
         </header>
 
         <div className="hero-reveal max-w-lg mx-auto mb-10">

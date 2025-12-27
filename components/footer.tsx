@@ -13,9 +13,9 @@ export function Footer() {
               THREADZ
             </div>
             <p className="text-stone-400 text-[10px] uppercase tracking-widest font-bold leading-relaxed">
-              Infinite Originals. <br />
-              Premium Production. <br />
-              Made in India.
+              Custom Clothing. <br />
+              Powered by AI. <br />
+              Made for India.
             </p>
             <div className="flex space-x-6 text-stone-400">
               <a

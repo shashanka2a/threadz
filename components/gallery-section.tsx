@@ -45,14 +45,14 @@ export function GallerySection() {
       <div className="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
         <div className="scroll-reveal">
           <h2 className="text-5xl md:text-6xl font-serif italic mb-4 tracking-tighter text-white">
-            The Gallery
+            What Others Are Making
           </h2>
           <p className="text-stone-500 text-sm font-light max-sm">
-            Browse real-time community drops. Every design reward its creator.
+            Real designs from real creators. Ready to wear your imagination?
           </p>
         </div>
         <button className="btn-secondary-gsap text-[10px] font-bold uppercase tracking-[0.4em] text-stone-500 hover:text-white transition-colors border-b border-stone-800 pb-2 flex items-center gap-2">
-          Explore Marketplace{" "}
+          Start Your Design{" "}
           <ArrowRight size={12} className="btn-icon" />
         </button>
       </div>

@@ -20,24 +20,24 @@ export function Hero() {
       <div className="relative z-10 text-center max-w-4xl">
         <header className="mb-6">
           <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-[1.05] tracking-tighter">
-            Curate Your <br />
+            Design it. <br />
             <span className="italic font-light text-stone-700 dark:text-stone-300">
-              Perfect Fit.
+              We'll make it.
             </span>
           </h1>
         </header>
 
         <div className="hero-reveal max-w-lg mx-auto mb-10">
           <p className="text-base md:text-lg text-stone-500 dark:text-stone-400 leading-relaxed font-light">
-            Why wear mass-produced? Use our Generative AI Studio to build
-            luxury-grade blanks that match your unique aesthetic.
+            Stop Buying. Start Creating. <br />
+            Why wear what everyone else is wearing? Use our AI Studio to create custom streetwear that is 100% you.
           </p>
         </div>
 
         <div className="hero-reveal flex items-center justify-center">
           <MagneticButton>
             <div className="flex items-center gap-3 relative z-10">
-              Enter Studio{" "}
+              Try the AI Studio{" "}
               <ArrowRight
                 size={14}
                 className="group-hover:translate-x-1 transition-transform duration-300"

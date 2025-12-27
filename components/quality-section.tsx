@@ -10,26 +10,26 @@ import {
 const qualityItems = [
   {
     id: "01",
-    title: "Premium Fiber",
-    desc: "Sustainably sourced yarns with high tensile strength for elite skin feel.",
+    title: "No Design Skills Needed",
+    desc: "If you can text, you can design. Our AI does the hard work.",
     icon: <Fingerprint />,
   },
   {
     id: "02",
-    title: "Heavy Cotton",
-    desc: "Dense, high-GSM weave that hangs perfectly with zero sag.",
+    title: "Heavyweight Fabric",
+    desc: "We use thick, high-quality cotton (High GSM). It feels expensive and lasts long.",
     icon: <Layers />,
   },
   {
     id: "03",
-    title: "Modern Fit",
-    desc: "Oversized silhouettes designed with architectural body mapping.",
+    title: "Perfect 'Oversized' Fit",
+    desc: "No more tight, awkward shirts. We specialize in the baggy, modern look.",
     icon: <Maximize2 />,
   },
   {
     id: "04",
-    title: "Pro Printing",
-    desc: "High-precision ink infusion ensuring art stays sharp through washes.",
+    title: "Made in India",
+    desc: "Supporting local craft with world-class technology.",
     icon: <PenTool />,
   },
 ];
@@ -41,17 +41,16 @@ export function QualitySection() {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
           <div className="lg:col-span-4 sticky top-32 scroll-reveal">
             <span className="text-[10px] font-bold uppercase tracking-[0.5em] text-stone-400 mb-4 block">
-              Physical Moat
+              WHY THREADZ
             </span>
             <h2 className="text-4xl md:text-5xl font-serif leading-tight mb-8">
-              Quality You <br />
+              Quality That <br />
               <span className="italic font-light text-stone-600 dark:text-stone-400">
-                Can Feel.
+                Speaks.
               </span>
             </h2>
             <p className="text-stone-500 dark:text-stone-400 font-light leading-relaxed mb-10">
-              A digital masterpiece deserves a luxury canvas. We focus on
-              heavyweight fabrics and structured drapes. Designed to last.
+              No design skills needed. Heavyweight fabric. Perfect oversized fit. Made in India.
             </p>
           </div>
 

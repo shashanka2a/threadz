@@ -153,30 +153,32 @@ export function StudioSection() {
           <div className="scroll-reveal space-y-8 order-1 lg:order-2">
             <div className="inline-flex items-center gap-4">
               <span className="text-[10px] font-black tracking-widest text-stone-300 dark:text-stone-700 italic">
-                CREATIVE PROCESS
+                HOW IT WORKS
               </span>
               <div className="h-px w-10 bg-stone-200 dark:bg-stone-800" />
             </div>
             <h2 className="text-4xl md:text-5xl font-serif leading-tight tracking-tight">
-              Design Studio. <br />
+              In 3 Steps. <br />
               <span className="italic font-light text-stone-700 dark:text-stone-300">
-                Generative Logic.
+                That's it.
               </span>
             </h2>
             <div className="space-y-6 text-stone-500 dark:text-stone-400 font-light leading-relaxed">
-              <p>
-                Threadz uses high-end AI that acts as your personal senior
-                creative director. It understands the nuances of modern
-                aesthetics. From Cyberpunk grit to Botanical minimalism.
-              </p>
-              <p>
-                Simply set your mood and watch as our engine builds an original
-                garment for you. No technical skills required. Just your unique
-                vision and our machine precision.
-              </p>
+              <div>
+                <p className="font-semibold text-stone-700 dark:text-stone-300 mb-1">1. Pick Your Fit</p>
+                <p>Choose from Oversized Tees, Boxy Hoodies, or Sweatshirts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-stone-700 dark:text-stone-300 mb-1">2. Talk to the AI</p>
+                <p>Just type what you want (e.g., "A neon tiger in Bangalore city style"). Our AI creates the art for you.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-stone-700 dark:text-stone-300 mb-1">3. Get it Delivered</p>
+                <p>We print your design on premium fabric and ship it to your door, anywhere in India.</p>
+              </div>
             </div>
             <button className="btn-secondary-gsap flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] pb-1 border-b border-stone-200 dark:border-stone-800 hover:border-black dark:hover:border-white transition-colors">
-              Start Project{" "}
+              Start Your Design{" "}
               <ChevronRight
                 size={14}
                 className="btn-icon opacity-40 group-hover:opacity-100"

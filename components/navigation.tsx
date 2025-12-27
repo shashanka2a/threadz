@@ -41,29 +41,28 @@ export function Navigation() {
             : "bg-transparent py-4 md:py-6"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-6">
-          <div className="flex items-center justify-between">
-            {/* Left: Desktop Nav Links, Mobile: Logo */}
-            <div className="flex items-center space-x-8">
-              {/* Desktop Nav Links */}
-              <div className="hidden md:flex space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold">
-                <Link
-                  href="#studio"
-                  className="hover:opacity-50 transition-all"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  AI Studio
-                </Link>
-                <Link
-                  href="#gallery"
-                  className="hover:opacity-50 transition-all"
-                  onClick={() => setIsMenuOpen(false)}
-                >
-                  Gallery
-                </Link>
-              </div>
-              
-              {/* Logo - Left on Mobile, After Nav on Desktop */}
+        <div className="max-w-7xl mx-auto px-3 md:px-6">
+          <div className="flex items-center justify-between relative">
+            {/* Left: Desktop Nav Links */}
+            <div className="hidden md:flex items-center space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold flex-1">
+              <Link
+                href="#studio"
+                className="hover:opacity-50 transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                AI Studio
+              </Link>
+              <Link
+                href="#gallery"
+                className="hover:opacity-50 transition-all"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Gallery
+              </Link>
+            </div>
+            
+            {/* Logo - Left on Mobile, Centered on Desktop */}
+            <div className="flex-1 md:flex-initial flex justify-start md:justify-center absolute md:relative left-0 md:left-auto">
               <Link
                 href="/"
                 className="flex flex-col items-start md:items-center text-left md:text-center"
@@ -79,7 +78,7 @@ export function Navigation() {
             </div>
 
             {/* Right: Actions */}
-            <div className="flex items-center justify-end space-x-2 md:space-x-6">
+            <div className="flex items-center justify-end space-x-2 md:space-x-6 flex-1 md:flex-initial">
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
                 className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all"

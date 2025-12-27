@@ -3,14 +3,23 @@
 import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import {
+  Palette,
   ChevronRight,
   Scan,
 } from "lucide-react";
+import { useTypingEffect } from "@/hooks/use-typing-effect";
 
 export function StudioSection() {
   const [appStep, setAppStep] = useState(0);
   const [isIllustrationInView, setIsIllustrationInView] = useState(false);
   const illustrationRef = useRef<HTMLDivElement>(null);
+  const typedWords = [
+    "Cyberpunk x Botanical",
+    "High-Grit Minimalism",
+    "Tokyo Neon Nights",
+    "Oversized Structural",
+  ];
+  const typedText = useTypingEffect(typedWords);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -33,8 +42,8 @@ export function StudioSection() {
     let timer: NodeJS.Timeout;
     if (isIllustrationInView) {
       timer = setInterval(() => {
-        setAppStep((prev) => (prev + 1) % 2);
-      }, 3000);
+        setAppStep((prev) => (prev + 1) % 3);
+      }, 4000);
     } else {
       setAppStep(0);
     }
@@ -53,10 +62,45 @@ export function StudioSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
           <div className="scroll-reveal relative order-2 lg:order-1">
             <div className="aspect-square bg-[#f9f7f2] dark:bg-[#121212] rounded-3xl overflow-hidden relative border border-stone-200 dark:border-stone-800 shadow-xl group layer-shadow">
-              {/* Step 0: Loading */}
+              {/* Step 0: Typing Animation */}
               <div
-                className={`absolute inset-0 transition-all duration-500 flex items-center justify-center ${
-                  appStep === 0 ? "opacity-100" : "opacity-0"
+                className={`absolute inset-0 transition-all duration-700 flex flex-col items-center justify-center p-12 ${
+                  appStep === 0
+                    ? "opacity-100 scale-100"
+                    : "opacity-0 scale-95"
+                }`}
+              >
+                <div className="w-full max-w-xs space-y-6">
+                  <div className="flex items-center justify-between">
+                    <span className="text-[9px] uppercase tracking-widest font-black opacity-30">
+                      Aesthetic Brief
+                    </span>
+                    <div className="flex gap-1">
+                      <div className="w-1 h-1 bg-black dark:bg-white rounded-full"></div>
+                      <div className="w-1 h-1 bg-black/20 dark:bg-white/20 rounded-full"></div>
+                    </div>
+                  </div>
+                  <div className="space-y-4">
+                    <div className="h-14 w-full bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-700 rounded-xl flex items-center px-5 shadow-inner">
+                      <Palette size={14} className="mr-3 opacity-30" />
+                      <div className="text-[11px] font-bold tracking-widest text-black dark:text-white overflow-hidden whitespace-nowrap">
+                        {typedText}
+                        <span className="cursor-blink ml-1 border-r border-black dark:border-white"></span>
+                      </div>
+                    </div>
+                    <div className="grid grid-cols-3 gap-2 opacity-40">
+                      <div className="h-6 bg-stone-200 dark:bg-stone-800 rounded-md"></div>
+                      <div className="h-6 bg-stone-900 dark:bg-stone-500 rounded-md"></div>
+                      <div className="h-6 bg-stone-200 dark:bg-stone-800 rounded-md"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Step 1: Generating Animation */}
+              <div
+                className={`absolute inset-0 transition-all duration-700 flex items-center justify-center ${
+                  appStep === 1 ? "opacity-100" : "opacity-0"
                 }`}
               >
                 <div className="flex flex-col items-center gap-4">
@@ -70,10 +114,10 @@ export function StudioSection() {
                 </div>
               </div>
 
-              {/* Step 1: Result */}
+              {/* Step 2: Final Result */}
               <div
-                className={`absolute inset-0 transition-all duration-500 flex items-center justify-center p-12 ${
-                  appStep === 1
+                className={`absolute inset-0 transition-all duration-1000 flex items-center justify-center p-12 ${
+                  appStep === 2
                     ? "opacity-100 translate-y-0"
                     : "opacity-0 translate-y-8"
                 }`}

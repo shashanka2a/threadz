@@ -14,6 +14,11 @@
   100% { transform: translateX(-50%); }
 }
 
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
 
 .animate-marquee { 
   display: flex; 
@@ -23,6 +28,10 @@
 
 .animate-marquee:hover { 
   animation-play-state: paused; 
+}
+
+.cursor-blink { 
+  animation: blink 0.8s infinite; 
 }
 
 .layer-shadow { 

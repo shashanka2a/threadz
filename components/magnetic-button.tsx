@@ -70,12 +70,12 @@ export function MagneticButton({ children }: MagneticButtonProps) {
   return (
     <button
       ref={btnRef}
-      className="relative px-12 py-5 bg-[#1a1a1a] dark:bg-[#f9f7f2] text-white dark:text-[#1a1a1a] rounded-full text-[10px] font-bold uppercase tracking-[0.3em] transition-all flex items-center justify-center gap-3 layer-shadow border border-white/10 overflow-hidden group"
+      className="relative px-8 py-4 bg-[#1a1a1a] dark:bg-[#f9f7f2] text-white dark:text-[#1a1a1a] rounded-lg text-[10px] font-bold uppercase tracking-[0.3em] transition-all flex items-center justify-center gap-3 layer-shadow border border-white/10 overflow-hidden group hover:scale-[1.02] hover:shadow-lg active:scale-[0.98]"
     >
-      <div className="btn-content flex items-center gap-3 relative z-10">
+      <div className="btn-content flex items-center gap-3 relative z-10 transition-transform duration-200 group-hover:translate-x-0.5">
         {children}
       </div>
-      <div className="absolute inset-0 bg-white/5 dark:bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity" />
+      <div className="absolute inset-0 bg-white/5 dark:bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-200" />
     </button>
   );
 }

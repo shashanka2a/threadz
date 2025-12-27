@@ -34,10 +34,10 @@ export function TshirtDoodle() {
     >
       <div className="relative w-full h-full">
         <Image
-          src="/tshirt-preview.png"
+          src="/t-shirt.png"
           alt="T-Shirt Doodle"
           fill
-          className="object-contain remove-bg"
+          className="object-cover object-center remove-bg"
           priority
         />
       </div>

@@ -34,7 +34,7 @@ export function TshirtDoodle() {
     >
       <div className="relative w-full h-full">
         <Image
-          src="https://static.vecteezy.com/system/resources/previews/019/478/028/non_2x/colorful-print-t-shirt-doodle-icon-hand-drawn-illustration-vector.jpg"
+          src="/tshirt-preview.png"
           alt="T-Shirt Doodle"
           fill
           className="object-contain remove-bg"

@@ -1,7 +1,7 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
+import { EnhancedCTAButton } from "@/components/enhanced-cta-button";
 
 const galleryImages = [
   {
@@ -42,19 +42,20 @@ export function GallerySection() {
       id="gallery"
       className="py-24 bg-[#1a1a1a] text-[#f9f7f2] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 mb-12 flex flex-col md:flex-row justify-between items-end gap-6">
-        <div className="scroll-reveal">
-          <h2 className="text-5xl md:text-6xl font-serif italic mb-4 tracking-tighter text-white">
-            What Others Are Making
-          </h2>
-          <p className="text-stone-500 text-sm font-light max-sm">
-            Real designs from real creators. Ready to wear your imagination?
-          </p>
+      <div className="max-w-7xl mx-auto px-6 mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-6">
+          <div className="scroll-reveal flex-1">
+            <h2 className="text-5xl md:text-6xl font-serif italic mb-4 tracking-tighter text-white">
+              What Others Are Making
+            </h2>
+            <p className="text-stone-500 text-sm font-light max-w-md">
+              Real designs from real creators. Ready to wear your imagination?
+            </p>
+          </div>
+          <div className="flex-shrink-0">
+            <EnhancedCTAButton />
+          </div>
         </div>
-        <button className="btn-secondary-gsap text-[10px] font-bold uppercase tracking-[0.4em] text-stone-500 hover:text-stone-300 dark:hover:text-stone-400 transition-colors border-b border-stone-800 hover:border-stone-600 dark:hover:border-stone-500 pb-2 flex items-center gap-2">
-          Start Your Design{" "}
-          <ArrowRight size={12} className="btn-icon" />
-        </button>
       </div>
 
       <div className="relative">

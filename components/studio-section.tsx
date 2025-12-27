@@ -108,21 +108,6 @@ export function StudioSection() {
                     <div className="absolute inset-0 border-4 border-stone-200 dark:border-stone-800 rounded-full"></div>
                     <div className="absolute inset-0 border-4 border-transparent border-t-accent rounded-full animate-spin"></div>
                   </div>
-                  {/* Thread stitching animation */}
-                  <svg
-                    width="80"
-                    height="40"
-                    viewBox="0 0 80 40"
-                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30"
-                  >
-                    <path
-                      d="M 10 20 Q 40 10, 70 20"
-                      stroke="currentColor"
-                      strokeWidth="2"
-                      fill="none"
-                      className="text-accent animate-thread-stitch"
-                    />
-                  </svg>
                   <p className="text-xs text-stone-500 dark:text-stone-400 font-light relative z-10">
                     Generating...
                   </p>

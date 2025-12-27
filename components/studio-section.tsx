@@ -158,10 +158,7 @@ export function StudioSection() {
               <div className="h-px w-10 bg-stone-200 dark:bg-stone-800" />
             </div>
             <h2 className="text-4xl md:text-5xl font-serif leading-tight tracking-tight">
-              In 3 Steps. <br />
-              <span className="italic font-light text-stone-700 dark:text-stone-300">
-                That's it.
-              </span>
+              <span className="whitespace-nowrap">You Design. We Make It.</span>
             </h2>
             <div className="space-y-6 text-stone-500 dark:text-stone-400 font-light leading-relaxed">
               <div>

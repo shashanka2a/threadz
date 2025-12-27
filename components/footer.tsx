@@ -5,7 +5,7 @@ import { Instagram, Facebook, Twitter, ArrowRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="pt-24 pb-0 px-6 bg-white dark:bg-[#1a1a1a] border-t border-stone-100 dark:border-stone-800">
+    <footer className="pt-24 pb-8 px-6 bg-white dark:bg-[#1a1a1a] border-t border-stone-100 dark:border-stone-800">
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20">
           <div className="space-y-4 md:space-y-6">

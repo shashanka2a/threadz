@@ -29,8 +29,8 @@ export function Hero() {
 
         <div className="hero-reveal max-w-lg mx-auto mb-10">
           <p className="text-base md:text-lg text-stone-500 dark:text-stone-400 leading-relaxed font-light">
-            Stop Buying. Start Creating. <br />
-            Why wear what everyone else is wearing? Use our AI Studio to create custom streetwear that is 100% you.
+            Upload your design or create one with AI. <br />
+            We'll print it on premium fabric and ship it to your door.
           </p>
         </div>
 

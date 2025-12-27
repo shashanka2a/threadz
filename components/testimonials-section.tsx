@@ -37,30 +37,30 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-24 px-6 bg-[#1a1a1a] text-[#f9f7f2] overflow-hidden">
+    <section className="py-32 px-6 bg-[#1a1a1a] text-[#f9f7f2] overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-20">
           <h2 className="text-4xl md:text-5xl font-serif italic mb-4 tracking-tighter text-white">
             What Creators Say
           </h2>
-          <p className="text-stone-500 text-sm font-light">
+          <p className="text-stone-500 text-base font-light">
             Trusted by designers and brands worldwide
           </p>
         </div>
 
         {/* Infinite Scroll Carousel */}
         <div className="relative">
-          <div className="flex gap-6 animate-scroll-left">
+          <div className="flex gap-8 animate-scroll-left">
             {[...testimonials, ...testimonials].map((testimonial, idx) => (
               <div
                 key={idx}
-                className="flex-none w-[320px] md:w-[380px] bg-[#121212] border border-stone-800 p-8 rounded-2xl"
+                className="flex-none w-[340px] md:w-[420px] bg-[#121212] border border-stone-800 p-10 rounded-2xl"
               >
-                <p className="text-stone-300 mb-6 leading-relaxed font-light text-sm">
+                <p className="text-stone-300 mb-8 leading-relaxed font-light text-base">
                   "{testimonial.quote}"
                 </p>
                 <div className="flex items-center gap-4">
-                  <div className="relative w-12 h-12 rounded-full overflow-hidden flex-shrink-0">
+                  <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-stone-700">
                     <Image
                       src={testimonial.avatar}
                       alt={testimonial.author}
@@ -69,10 +69,10 @@ export function TestimonialsSection() {
                     />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-sm mb-1">
+                    <p className="text-white font-bold text-base mb-1">
                       {testimonial.author}
                     </p>
-                    <p className="text-stone-500 text-xs">
+                    <p className="text-stone-500 text-sm">
                       {testimonial.role}
                     </p>
                   </div>

@@ -97,7 +97,7 @@ export function StudioSection() {
                 </div>
               </div>
 
-              {/* Step 1: Generating Animation */}
+              {/* Step 1: Generating Animation with Thread Stitching */}
               <div
                 className={`absolute inset-0 transition-all duration-700 flex items-center justify-center ${
                   appStep === 1 ? "opacity-100" : "opacity-0"
@@ -106,9 +106,24 @@ export function StudioSection() {
                 <div className="flex flex-col items-center gap-4">
                   <div className="relative w-16 h-16">
                     <div className="absolute inset-0 border-4 border-stone-200 dark:border-stone-800 rounded-full"></div>
-                    <div className="absolute inset-0 border-4 border-transparent border-t-black dark:border-t-white rounded-full animate-spin"></div>
+                    <div className="absolute inset-0 border-4 border-transparent border-t-accent rounded-full animate-spin"></div>
                   </div>
-                  <p className="text-xs text-stone-500 dark:text-stone-400 font-light">
+                  {/* Thread stitching animation */}
+                  <svg
+                    width="80"
+                    height="40"
+                    viewBox="0 0 80 40"
+                    className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 opacity-30"
+                  >
+                    <path
+                      d="M 10 20 Q 40 10, 70 20"
+                      stroke="currentColor"
+                      strokeWidth="2"
+                      fill="none"
+                      className="text-accent animate-thread-stitch"
+                    />
+                  </svg>
+                  <p className="text-xs text-stone-500 dark:text-stone-400 font-light relative z-10">
                     Generating...
                   </p>
                 </div>

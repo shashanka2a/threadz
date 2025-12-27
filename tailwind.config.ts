@@ -13,6 +13,13 @@ const config: Config = {
         sans: ['var(--font-sans)'],
         serif: ['var(--font-serif)'],
       },
+      colors: {
+        accent: {
+          DEFAULT: '#D4AF37',
+          light: '#E5C158',
+          dark: '#B8941F',
+        },
+      },
     },
   },
   plugins: [],

@@ -20,9 +20,9 @@ export function Hero() {
       <div className="relative z-10 text-center max-w-4xl">
         <header className="mb-6">
           <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-[1.05] tracking-tighter">
-            Design it. <br />
+            You Design. <br />
             <span className="italic font-light text-stone-700 dark:text-stone-300">
-              We'll make it.
+              We Make It.
             </span>
           </h1>
         </header>

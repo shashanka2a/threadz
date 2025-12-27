@@ -153,12 +153,12 @@ export function StudioSection() {
           <div className="scroll-reveal space-y-8 order-1 lg:order-2">
             <div className="inline-flex items-center gap-4">
               <span className="text-[10px] font-black tracking-widest text-stone-300 dark:text-stone-700 italic">
-                HOW IT WORKS
+                THE PROCESS
               </span>
               <div className="h-px w-10 bg-stone-200 dark:bg-stone-800" />
             </div>
             <h2 className="text-4xl md:text-5xl font-serif leading-tight tracking-tight">
-              <span className="whitespace-nowrap">You Design. We Make It.</span>
+              <span className="whitespace-nowrap">Simple. Fast. Yours.</span>
             </h2>
             <div className="space-y-6 text-stone-500 dark:text-stone-400 font-light leading-relaxed">
               <div>

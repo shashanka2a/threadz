@@ -15,15 +15,14 @@ export function GSAPProvider({ children }: { children: React.ReactNode }) {
       ease: "power4.out",
     });
 
-    // Scroll Reveal Logic
+    // Scroll Reveal Logic - simplified without fade
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             gsap.to(entry.target, {
-              opacity: 1,
               y: 0,
-              duration: 1.2,
+              duration: 0.8,
               ease: "power2.out",
             });
           }
@@ -33,7 +32,7 @@ export function GSAPProvider({ children }: { children: React.ReactNode }) {
     );
 
     document.querySelectorAll(".scroll-reveal").forEach((el) => {
-      gsap.set(el, { opacity: 0, y: 30 });
+      gsap.set(el, { y: 20 });
       observer.observe(el);
     });
 

@@ -6,6 +6,7 @@ import {
   Maximize2,
   PenTool,
 } from "lucide-react";
+import { CustomCheckmark } from "@/components/custom-checkmark";
 
 const qualityItems = [
   {
@@ -54,15 +55,15 @@ export function QualitySection() {
             </p>
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400">
-                <span className="text-green-600 dark:text-green-400">✅</span>
+                <CustomCheckmark className="text-stone-700 dark:text-stone-300 flex-shrink-0" />
                 <span>Soft & Thick: 100% Premium Cotton</span>
               </div>
               <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400">
-                <span className="text-green-600 dark:text-green-400">✅</span>
+                <CustomCheckmark className="text-stone-700 dark:text-stone-300 flex-shrink-0" />
                 <span>Bold Prints: Colors that don't fade after a wash</span>
               </div>
               <div className="flex items-center gap-2 text-stone-600 dark:text-stone-400">
-                <span className="text-green-600 dark:text-green-400">✅</span>
+                <CustomCheckmark className="text-stone-700 dark:text-stone-300 flex-shrink-0" />
                 <span>Sustainable: We only make what you order. No waste.</span>
               </div>
             </div>

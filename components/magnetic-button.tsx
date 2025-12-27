@@ -104,19 +104,19 @@ export function MagneticButton({ children }: MagneticButtonProps) {
         e.currentTarget.style.boxShadow = "";
       }}
     >
-      {/* Animated Gradient Border with Accent */}
-      <div className="absolute -inset-[2px] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10">
-        <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-accent/50 via-accent to-accent/50 dark:from-accent dark:via-accent/80 dark:to-accent animate-gradient-border"></div>
+      {/* Subtle Border on Hover */}
+      <div className="absolute -inset-[1px] rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 -z-10">
+        <div className="absolute inset-0 rounded-lg border border-stone-300/30 dark:border-stone-600/30"></div>
       </div>
 
       {/* Subtle Glow Effect */}
-      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-white/20 via-white/10 to-white/20 dark:from-white/10 dark:via-white/5 dark:to-white/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
+      <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-white/10 via-white/5 to-white/10 dark:from-white/5 dark:via-white/3 dark:to-white/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300 blur-md"></div>
 
       {/* Ripple effects */}
       {ripples.map((ripple) => (
         <span
           key={ripple.id}
-          className="absolute rounded-full bg-accent/30 pointer-events-none animate-ripple"
+          className="absolute rounded-full bg-stone-400/20 dark:bg-stone-500/20 pointer-events-none animate-ripple"
           style={{
             left: `${ripple.x}px`,
             top: `${ripple.y}px`,

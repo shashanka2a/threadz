@@ -4,7 +4,6 @@ import { StudioSection } from "@/components/studio-section";
 import { GallerySection } from "@/components/gallery-section";
 import { QualitySection } from "@/components/quality-section";
 import { TestimonialsSection } from "@/components/testimonials-section";
-import { PartnersSection } from "@/components/partners-section";
 import { Footer } from "@/components/footer";
 import { GSAPProvider } from "@/components/gsap-provider";
 
@@ -18,7 +17,6 @@ export default function Home() {
         <GallerySection />
         <QualitySection />
         <TestimonialsSection />
-        <PartnersSection />
         <Footer />
       </div>
     </GSAPProvider>

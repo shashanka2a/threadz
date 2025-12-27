@@ -41,20 +41,20 @@ export function Navigation() {
             : "bg-transparent py-4 md:py-6"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-3 md:px-6">
-          <div className="flex items-center justify-between relative">
+        <div className="max-w-7xl mx-auto px-4 md:px-8">
+          <div className="flex items-center justify-between">
             {/* Left: Desktop Nav Links */}
-            <div className="hidden md:flex items-center space-x-8 text-[10px] uppercase tracking-[0.2em] font-bold flex-1">
+            <div className="hidden md:flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">
               <Link
                 href="#studio"
-                className="hover:opacity-50 transition-all"
+                className="hover:opacity-60 transition-opacity duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 AI Studio
               </Link>
               <Link
                 href="#gallery"
-                className="hover:opacity-50 transition-all"
+                className="hover:opacity-60 transition-opacity duration-200"
                 onClick={() => setIsMenuOpen(false)}
               >
                 Gallery
@@ -62,7 +62,7 @@ export function Navigation() {
             </div>
             
             {/* Logo - Left on Mobile, Centered on Desktop */}
-            <div className="flex-1 md:flex-initial flex justify-start md:justify-center absolute md:relative left-0 md:left-auto">
+            <div className="flex-1 md:absolute md:left-1/2 md:-translate-x-1/2 flex justify-start md:justify-center">
               <Link
                 href="/"
                 className="flex flex-col items-start md:items-center text-left md:text-center"
@@ -78,10 +78,10 @@ export function Navigation() {
             </div>
 
             {/* Right: Actions */}
-            <div className="flex items-center justify-end space-x-2 md:space-x-6 flex-1 md:flex-initial">
+            <div className="flex items-center gap-3 md:gap-6">
               <button
                 onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all"
+                className="p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all duration-200"
                 aria-label="Toggle theme"
               >
                 {mounted && theme === "dark" ? (
@@ -90,15 +90,15 @@ export function Navigation() {
                   <Moon size={18} />
                 )}
               </button>
-              <button className="hidden md:flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-50">
+              <button className="hidden md:flex items-center gap-2 text-[10px] font-bold uppercase tracking-widest hover:opacity-60 transition-opacity duration-200 px-2 py-1">
                 <User size={14} /> Account
               </button>
-              <button className="relative p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all hover:scale-110 active:scale-95">
+              <button className="relative p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all duration-200 hover:scale-105 active:scale-95">
                 <ShoppingBag size={18} />
-                <span className="absolute top-1 right-1 w-2 h-2 bg-black dark:bg-white rounded-full border border-[#f9f7f2] dark:border-[#121212]"></span>
+                <span className="absolute top-1 right-1 w-2 h-2 bg-black dark:bg-white rounded-full border-2 border-[#f9f7f2] dark:border-[#121212]"></span>
               </button>
               <button
-                className="md:hidden p-2"
+                className="md:hidden p-2 hover:bg-black/5 dark:hover:bg-white/5 rounded-full transition-all duration-200"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label="Toggle menu"
               >

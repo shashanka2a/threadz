@@ -5,14 +5,14 @@ import { Instagram, Facebook, Twitter, ArrowRight } from "lucide-react";
 
 export function Footer() {
   return (
-    <footer className="py-24 px-6 bg-white dark:bg-[#1a1a1a] border-t border-stone-100 dark:border-stone-800">
+    <footer className="pt-24 pb-0 px-6 bg-white dark:bg-[#1a1a1a] border-t border-stone-100 dark:border-stone-800">
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-20">
-          <div className="space-y-6">
-            <div className="text-2xl font-serif font-black tracking-tighter text-black dark:text-white">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12 mb-12 md:mb-20">
+          <div className="space-y-4 md:space-y-6">
+            <div className="text-xl md:text-2xl font-serif font-black tracking-tighter text-black dark:text-white">
               THREADZ
             </div>
-            <p className="text-stone-400 text-[10px] uppercase tracking-widest font-bold leading-loose">
+            <p className="text-stone-400 text-[10px] uppercase tracking-widest font-bold leading-relaxed">
               Infinite Originals. <br />
               Premium Production. <br />
               Made in India.
@@ -42,11 +42,11 @@ export function Footer() {
             </div>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-black dark:text-white">
               Experience
             </h5>
-            <ul className="space-y-3 text-[10px] font-bold uppercase tracking-widest text-stone-400">
+            <ul className="space-y-2 md:space-y-3 text-[10px] font-bold uppercase tracking-widest text-stone-400">
               <li>
                 <Link
                   href="#studio"
@@ -74,11 +74,11 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-black dark:text-white">
               Atelier
             </h5>
-            <ul className="space-y-3 text-[10px] font-bold uppercase tracking-widest text-stone-400">
+            <ul className="space-y-2 md:space-y-3 text-[10px] font-bold uppercase tracking-widest text-stone-400">
               <li>
                 <Link
                   href="#"
@@ -106,7 +106,7 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="space-y-6">
+          <div className="space-y-4 md:space-y-6">
             <h5 className="text-[10px] font-black uppercase tracking-[0.4em] text-black dark:text-white">
               Newsletter
             </h5>
@@ -123,11 +123,11 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="flex flex-col md:flex-row justify-between items-center border-t border-stone-50 dark:border-stone-900 pt-12 gap-6 opacity-40">
-          <p className="text-[9px] font-bold uppercase tracking-[0.4em]">
+        <div className="flex flex-col md:flex-row justify-between items-center border-t border-stone-50 dark:border-stone-900 pt-8 md:pt-12 pb-0 gap-4 md:gap-6 opacity-40">
+          <p className="text-[9px] font-bold uppercase tracking-[0.4em] text-center md:text-left">
             © 2024 Threadz Generative House.
           </p>
-          <div className="flex gap-8 text-[9px] font-bold uppercase tracking-[0.4em]">
+          <div className="flex gap-6 md:gap-8 text-[9px] font-bold uppercase tracking-[0.4em]">
             <Link
               href="#"
               className="hover:text-black dark:hover:text-white transition-colors"

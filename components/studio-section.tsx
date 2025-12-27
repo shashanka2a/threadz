@@ -43,7 +43,7 @@ export function StudioSection() {
     if (isIllustrationInView) {
       timer = setInterval(() => {
         setAppStep((prev) => (prev + 1) % 3);
-      }, 4000);
+      }, 1500);
     } else {
       setAppStep(0);
     }

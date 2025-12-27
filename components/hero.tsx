@@ -5,6 +5,7 @@ import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { MagneticButton } from "@/components/magnetic-button";
 import { AnimatedIllustration } from "@/components/animated-illustration";
+import { TshirtDoodle } from "@/components/tshirt-doodle";
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -23,7 +24,12 @@ export function Hero() {
         <AnimatedIllustration />
       </div>
 
-      <div className="relative z-10 text-center max-w-4xl">
+      {/* T-Shirt Doodle on Right */}
+      <div className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 pointer-events-none">
+        <TshirtDoodle />
+      </div>
+
+      <div className="relative z-10 text-center max-w-4xl mx-auto">
         <header className="mb-6">
           <h1 className="hero-reveal text-5xl md:text-7xl lg:text-8xl font-serif mb-6 leading-[1.05] tracking-tighter">
             <span

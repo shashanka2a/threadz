@@ -5,29 +5,29 @@ import { gsap } from "gsap";
 
 export function TshirtDoodle() {
   const svgRef = useRef<SVGSVGElement>(null);
-  const path1Ref = useRef<SVGPathElement>(null);
-  const path2Ref = useRef<SVGPathElement>(null);
-  const path3Ref = useRef<SVGPathElement>(null);
+  const outlineRef = useRef<SVGPathElement>(null);
 
   useEffect(() => {
-    if (!svgRef.current) return;
+    if (!svgRef.current || !outlineRef.current) return;
 
-    const paths = [path1Ref.current, path2Ref.current, path3Ref.current].filter(Boolean);
+    // Animate drawing the outline
+    const outline = outlineRef.current;
+    const length = outline.getTotalLength();
+    outline.style.strokeDasharray = `${length}`;
+    outline.style.strokeDashoffset = `${length}`;
     
-    // Animate drawing the t-shirt
-    paths.forEach((path, index) => {
-      if (!path) return;
-      const length = path.getTotalLength();
-      path.style.strokeDasharray = `${length}`;
-      path.style.strokeDashoffset = `${length}`;
-      
-      gsap.to(path, {
-        strokeDashoffset: 0,
-        duration: 1.5,
-        delay: index * 0.3,
-        ease: "power2.out",
-      });
+    gsap.to(outline, {
+      strokeDashoffset: 0,
+      duration: 2,
+      ease: "power2.out",
     });
+
+    // Fade in the fill and texture
+    gsap.fromTo(
+      svgRef.current.querySelectorAll(".tshirt-fill, .tshirt-texture"),
+      { opacity: 0 },
+      { opacity: 1, duration: 1.5, delay: 1, ease: "power2.out" }
+    );
 
     // Subtle floating animation
     gsap.to(svgRef.current, {
@@ -40,59 +40,100 @@ export function TshirtDoodle() {
   }, []);
 
   return (
-    <div className="relative w-64 h-64 md:w-80 md:h-80 opacity-40 dark:opacity-25">
+    <div className="relative w-64 h-64 md:w-80 md:h-80 opacity-50 dark:opacity-40">
       <svg
         ref={svgRef}
-        viewBox="0 0 200 220"
+        viewBox="0 0 200 240"
         className="w-full h-full"
         xmlns="http://www.w3.org/2000/svg"
       >
-        {/* Left Sleeve - wider and more realistic */}
+        {/* T-Shirt Fill - Periwinkle/Cornflower Blue */}
         <path
-          ref={path1Ref}
-          d="M 20 70 Q 10 65, 8 60 Q 6 55, 8 50 Q 10 45, 15 45 Q 20 45, 25 50 Q 30 55, 35 60 L 40 65"
-          fill="none"
-          stroke="currentColor"
-          strokeWidth="3.5"
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          className="text-stone-500 dark:text-stone-500"
+          className="tshirt-fill"
+          d="M 35 70 Q 25 65, 18 60 Q 12 55, 15 50 Q 18 45, 25 48 Q 30 50, 38 58 Q 40 60, 42 65 Q 45 70, 50 75 L 50 85 L 50 100 L 52 115 L 55 130 L 58 145 L 62 160 L 68 175 L 75 185 L 85 192 L 100 198 L 115 192 L 125 185 L 132 175 L 138 160 L 142 145 L 145 130 L 148 115 L 150 100 L 150 85 L 150 75 Q 155 70, 158 65 Q 160 60, 162 58 Q 170 50, 175 48 Q 182 45, 185 50 Q 188 55, 182 60 Q 175 65, 165 70 Q 160 75, 155 80 Q 150 85, 145 88 Q 140 90, 135 92 Q 130 90, 125 88 Q 120 85, 115 82 Q 110 80, 105 78 Q 100 80, 95 78 Q 90 80, 85 82 Q 80 85, 75 88 Q 70 90, 65 92 Q 60 90, 55 88 Q 50 85, 45 80 Q 40 75, 35 70 Z"
+          fill="#8B9DC3"
+          opacity="0.9"
         />
         
-        {/* Right Sleeve */}
+        {/* Wavy Hand-Drawn Outline */}
         <path
-          ref={path2Ref}
-          d="M 180 70 Q 190 65, 192 60 Q 194 55, 192 50 Q 190 45, 185 45 Q 180 45, 175 50 Q 170 55, 165 60 L 160 65"
+          ref={outlineRef}
+          d="M 35 70 Q 25 65, 18 60 Q 12 55, 15 50 Q 18 45, 25 48 Q 30 50, 38 58 Q 40 60, 42 65 Q 45 70, 50 75 L 50 85 L 50 100 L 52 115 L 55 130 L 58 145 L 62 160 L 68 175 L 75 185 L 85 192 L 100 198 L 115 192 L 125 185 L 132 175 L 138 160 L 142 145 L 145 130 L 148 115 L 150 100 L 150 85 L 150 75 Q 155 70, 158 65 Q 160 60, 162 58 Q 170 50, 175 48 Q 182 45, 185 50 Q 188 55, 182 60 Q 175 65, 165 70 Q 160 75, 155 80 Q 150 85, 145 88 Q 140 90, 135 92 Q 130 90, 125 88 Q 120 85, 115 82 Q 110 80, 105 78 Q 100 80, 95 78 Q 90 80, 85 82 Q 80 85, 75 88 Q 70 90, 65 92 Q 60 90, 55 88 Q 50 85, 45 80 Q 40 75, 35 70 Z"
           fill="none"
-          stroke="currentColor"
-          strokeWidth="3.5"
+          stroke="#1a1a1a"
+          strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-stone-500 dark:text-stone-500"
         />
         
-        {/* Main T-Shirt Body - wider and boxier */}
+        {/* Rounded Neckline */}
         <path
-          ref={path3Ref}
-          d="M 40 65 L 40 75 L 40 85 L 42 95 L 45 105 L 50 115 L 55 125 L 65 135 L 75 140 L 100 145 L 125 140 L 135 135 L 145 125 L 150 115 L 155 105 L 158 95 L 160 85 L 160 75 L 160 65 M 40 65 Q 50 60, 60 58 Q 70 56, 80 55 Q 90 56, 100 57 Q 110 56, 120 55 Q 130 56, 140 58 Q 150 60, 160 65"
+          d="M 75 88 Q 80 85, 85 82 Q 90 80, 95 78 Q 100 80, 105 78 Q 110 80, 115 82 Q 120 85, 125 88"
           fill="none"
-          stroke="currentColor"
-          strokeWidth="4"
+          stroke="#1a1a1a"
+          strokeWidth="2.5"
           strokeLinecap="round"
           strokeLinejoin="round"
-          className="text-stone-600 dark:text-stone-400"
         />
         
-        {/* Neckline - crew neck */}
+        {/* Lighter Blue Scribbled Texture Lines - Horizontal/Digital */}
         <path
-          d="M 80 55 Q 85 52, 90 50 Q 95 52, 100 54 Q 105 52, 110 50 Q 115 52, 120 55"
+          className="tshirt-texture"
+          d="M 55 110 Q 70 108, 85 110 Q 100 112, 115 110 Q 130 108, 145 110"
           fill="none"
-          stroke="currentColor"
-          strokeWidth="3"
+          stroke="#B8C5E0"
+          strokeWidth="2"
           strokeLinecap="round"
-          strokeLinejoin="round"
-          className="text-stone-500 dark:text-stone-500"
+          opacity="0.7"
         />
+        
+        <path
+          className="tshirt-texture"
+          d="M 60 130 Q 75 128, 90 130 Q 105 132, 120 130 Q 135 128, 140 130"
+          fill="none"
+          stroke="#B8C5E0"
+          strokeWidth="2"
+          strokeLinecap="round"
+          opacity="0.7"
+        />
+        
+        <path
+          className="tshirt-texture"
+          d="M 65 90 Q 80 88, 95 90 Q 110 92, 125 90 Q 135 88, 140 90"
+          fill="none"
+          stroke="#B8C5E0"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          opacity="0.6"
+        />
+        
+        {/* Diagonal Scribbled Lines */}
+        <path
+          className="tshirt-texture"
+          d="M 60 100 Q 75 105, 90 100 Q 105 95, 120 100"
+          fill="none"
+          stroke="#B8C5E0"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          opacity="0.6"
+        />
+        
+        <path
+          className="tshirt-texture"
+          d="M 70 120 Q 85 125, 100 120 Q 115 115, 130 120"
+          fill="none"
+          stroke="#B8C5E0"
+          strokeWidth="1.5"
+          strokeLinecap="round"
+          opacity="0.6"
+        />
+        
+        {/* Small Dots - Scattered Pattern */}
+        <circle className="tshirt-texture" cx="70" cy="95" r="2.5" fill="#B8C5E0" opacity="0.8" />
+        <circle className="tshirt-texture" cx="130" cy="90" r="2" fill="#B8C5E0" opacity="0.8" />
+        <circle className="tshirt-texture" cx="85" cy="140" r="2.5" fill="#B8C5E0" opacity="0.8" />
+        <circle className="tshirt-texture" cx="115" cy="135" r="2" fill="#B8C5E0" opacity="0.8" />
+        <circle className="tshirt-texture" cx="100" cy="110" r="2" fill="#B8C5E0" opacity="0.8" />
       </svg>
     </div>
   );

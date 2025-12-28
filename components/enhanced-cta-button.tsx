@@ -80,7 +80,7 @@ export function EnhancedCTAButton({
       ref={btnRef}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
-      className={`relative group px-10 py-5 bg-white dark:bg-[#1a1a1a] text-[#1a1a1a] dark:text-white rounded-xl text-sm font-bold uppercase tracking-[0.2em] transition-all duration-500 flex items-center justify-center gap-3 overflow-hidden shadow-xl hover:shadow-2xl hover:scale-105 active:scale-100 transform-gpu ${className}`}
+      className={`relative group px-6 sm:px-8 md:px-10 py-3 sm:py-4 md:py-5 bg-white dark:bg-[#1a1a1a] text-[#1a1a1a] dark:text-white rounded-lg sm:rounded-xl text-xs sm:text-sm font-bold uppercase tracking-[0.2em] transition-all duration-500 flex items-center justify-center gap-2 sm:gap-3 overflow-hidden shadow-xl hover:shadow-2xl hover:scale-105 active:scale-100 transform-gpu ${className}`}
       style={{
         transformStyle: "preserve-3d",
       }}
@@ -115,8 +115,8 @@ export function EnhancedCTAButton({
           {children}
         </span>
         <ArrowRight
-          size={16}
-          className="group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300"
+          size={14}
+          className="sm:w-4 sm:h-4 group-hover:translate-x-1 group-hover:scale-110 transition-all duration-300"
         />
       </span>
 

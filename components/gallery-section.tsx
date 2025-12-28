@@ -40,30 +40,30 @@ export function GallerySection() {
   return (
     <section
       id="gallery"
-      className="py-24 bg-[#1a1a1a] text-[#f9f7f2] overflow-hidden"
+      className="py-16 sm:py-20 md:py-24 bg-[#1a1a1a] text-[#f9f7f2] overflow-hidden"
     >
-      <div className="max-w-7xl mx-auto px-6 mb-16">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 md:gap-6">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 mb-12 sm:mb-16">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-6 sm:gap-8 md:gap-6">
           <div className="scroll-reveal flex-1">
-            <h2 className="text-5xl md:text-6xl font-serif italic mb-4 tracking-tighter text-white">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-serif italic mb-3 sm:mb-4 tracking-tighter text-white">
               What Others Are Making
             </h2>
-            <p className="text-stone-500 text-sm font-light max-w-md">
+            <p className="text-stone-500 text-xs sm:text-sm font-light max-w-md">
               Real designs from real creators. Ready to wear your imagination?
             </p>
           </div>
-          <div className="flex-shrink-0">
+          <div className="flex-shrink-0 w-full md:w-auto">
             <EnhancedCTAButton />
           </div>
         </div>
       </div>
 
       <div className="relative">
-        <div className="animate-marquee gap-6 px-3">
+        <div className="animate-marquee gap-4 sm:gap-6 px-3">
           {[...galleryImages, ...galleryImages].map((img, i) => (
             <div
               key={i}
-              className="flex-none w-[280px] md:w-[350px] aspect-[4/5] relative group cursor-pointer overflow-hidden rounded-lg border-2 border-stone-700/50 group-hover:border-stone-600/70 dark:group-hover:border-stone-500/70 transition-all duration-500 layer-shadow"
+              className="flex-none w-[200px] xs:w-[240px] sm:w-[280px] md:w-[320px] lg:w-[350px] aspect-[4/5] relative group cursor-pointer overflow-hidden rounded-lg border-2 border-stone-700/50 group-hover:border-stone-600/70 dark:group-hover:border-stone-500/70 transition-all duration-500 layer-shadow"
             >
               {/* Vignette overlay */}
               <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/40 z-10 pointer-events-none"></div>
@@ -78,11 +78,11 @@ export function GallerySection() {
               {/* Border glow on hover */}
               <div className="absolute inset-0 border-2 border-stone-500/0 group-hover:border-stone-500/20 dark:group-hover:border-stone-400/20 rounded-lg transition-all duration-500 pointer-events-none z-20"></div>
               
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all p-8 flex flex-col justify-end z-30">
-                <p className="text-[9px] uppercase tracking-widest font-bold text-stone-400 mb-1">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all p-4 sm:p-6 md:p-8 flex flex-col justify-end z-30">
+                <p className="text-[8px] sm:text-[9px] uppercase tracking-widest font-bold text-stone-400 mb-1">
                   {img.creator}
                 </p>
-                <h4 className="text-xl font-serif italic text-white">
+                <h4 className="text-base sm:text-lg md:text-xl font-serif italic text-white">
                   {img.title}
                 </h4>
               </div>

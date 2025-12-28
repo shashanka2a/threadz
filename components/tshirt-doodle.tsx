@@ -30,7 +30,7 @@ export function TshirtDoodle() {
   return (
     <div
       ref={containerRef}
-      className="relative w-64 h-64 md:w-80 md:h-80 opacity-50 dark:opacity-40"
+      className="relative w-32 h-32 sm:w-40 sm:h-40 md:w-64 md:h-64 lg:w-80 lg:h-80 opacity-40 dark:opacity-30 sm:opacity-50 dark:sm:opacity-40"
     >
       <div className="relative w-full h-full">
         <Image

@@ -56,12 +56,12 @@ export function StudioSection() {
     <section
       ref={illustrationRef}
       id="studio"
-      className="py-24 px-6 bg-white dark:bg-[#1a1a1a] border-y border-stone-100 dark:border-stone-800"
+      className="py-16 sm:py-20 md:py-24 px-4 sm:px-6 bg-white dark:bg-[#1a1a1a] border-y border-stone-100 dark:border-stone-800"
     >
       <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 sm:gap-16 md:gap-20 items-center">
           <div className="scroll-reveal relative order-2 lg:order-1">
-            <div className="aspect-square bg-[#f9f7f2] dark:bg-[#121212] rounded-3xl overflow-hidden relative border border-stone-200 dark:border-stone-800 shadow-xl group layer-shadow">
+            <div className="aspect-square bg-[#f9f7f2] dark:bg-[#121212] rounded-2xl sm:rounded-3xl overflow-hidden relative border border-stone-200 dark:border-stone-800 shadow-xl group layer-shadow">
               {/* Step 0: Typing Animation */}
               <div
                 className={`absolute inset-0 transition-all duration-700 flex flex-col items-center justify-center p-12 ${
@@ -150,17 +150,17 @@ export function StudioSection() {
             </div>
           </div>
 
-          <div className="scroll-reveal space-y-8 order-1 lg:order-2">
-            <div className="inline-flex items-center gap-4">
-              <span className="text-[10px] font-black tracking-widest text-stone-300 dark:text-stone-700 italic">
+          <div className="scroll-reveal space-y-6 sm:space-y-8 order-1 lg:order-2">
+            <div className="inline-flex items-center gap-3 sm:gap-4">
+              <span className="text-[9px] sm:text-[10px] font-black tracking-widest text-stone-300 dark:text-stone-700 italic">
                 THE PROCESS
               </span>
-              <div className="h-px w-10 bg-stone-200 dark:bg-stone-800" />
+              <div className="h-px w-8 sm:w-10 bg-stone-200 dark:bg-stone-800" />
             </div>
-            <h2 className="text-4xl md:text-5xl font-serif leading-tight tracking-tight">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif leading-tight tracking-tight">
               <span className="whitespace-nowrap">Simple. Fast. Yours.</span>
             </h2>
-            <div className="space-y-6 text-stone-500 dark:text-stone-400 font-light leading-relaxed">
+            <div className="space-y-4 sm:space-y-6 text-sm sm:text-base text-stone-500 dark:text-stone-400 font-light leading-relaxed">
               <div>
                 <p className="font-semibold text-stone-700 dark:text-stone-300 mb-1">1. Pick Your Fit</p>
                 <p>Choose from Oversized Tees, Boxy Hoodies, or Sweatshirts.</p>
@@ -174,11 +174,11 @@ export function StudioSection() {
                 <p>We print your design on premium fabric and ship it to your door, anywhere in India.</p>
               </div>
             </div>
-            <button className="btn-secondary-gsap flex items-center gap-3 text-[10px] font-bold uppercase tracking-[0.3em] pb-1 border-b border-stone-200 dark:border-stone-800 hover:border-black dark:hover:border-white transition-colors">
+            <button className="btn-secondary-gsap flex items-center gap-2 sm:gap-3 text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] pb-1 border-b border-stone-200 dark:border-stone-800 hover:border-black dark:hover:border-white transition-colors">
               Start Your Design{" "}
               <ChevronRight
-                size={14}
-                className="btn-icon opacity-40 group-hover:opacity-100"
+                size={12}
+                className="sm:w-[14px] sm:h-[14px] btn-icon opacity-40 group-hover:opacity-100"
               />
             </button>
           </div>

@@ -90,7 +90,7 @@ export function MagneticButton({ children }: MagneticButtonProps) {
   return (
     <button
       ref={btnRef}
-      className="relative px-8 py-4 bg-[#1a1a1a] dark:bg-[#f9f7f2] text-white dark:text-[#1a1a1a] rounded-lg text-[10px] font-bold uppercase tracking-[0.3em] transition-all flex items-center justify-center gap-3 overflow-hidden group active:scale-[0.98] transform-gpu"
+      className="relative px-6 sm:px-8 py-3 sm:py-4 bg-[#1a1a1a] dark:bg-[#f9f7f2] text-white dark:text-[#1a1a1a] rounded-lg text-[9px] xs:text-[10px] font-bold uppercase tracking-[0.3em] transition-all flex items-center justify-center gap-2 sm:gap-3 overflow-hidden group active:scale-[0.98] transform-gpu"
       style={{
         transformStyle: "preserve-3d",
         transition: "transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s ease-out",

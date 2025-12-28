@@ -37,30 +37,30 @@ export function TestimonialsSection() {
   ];
 
   return (
-    <section className="py-32 px-6 bg-[#1a1a1a] text-[#f9f7f2] overflow-hidden">
+    <section className="py-20 sm:py-24 md:py-32 px-4 sm:px-6 bg-[#1a1a1a] text-[#f9f7f2] overflow-hidden">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
-          <h2 className="text-4xl md:text-5xl font-serif italic mb-4 tracking-tighter text-white">
+        <div className="text-center mb-12 sm:mb-16 md:mb-20">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif italic mb-3 sm:mb-4 tracking-tighter text-white">
             What Creators Say
           </h2>
-          <p className="text-stone-500 text-base font-light">
+          <p className="text-stone-500 text-sm sm:text-base font-light">
             Trusted by designers and brands worldwide
           </p>
         </div>
 
         {/* Infinite Scroll Carousel */}
         <div className="relative">
-          <div className="flex gap-8 animate-scroll-left">
+          <div className="flex gap-4 sm:gap-6 md:gap-8 animate-scroll-left">
             {[...testimonials, ...testimonials].map((testimonial, idx) => (
               <div
                 key={idx}
-                className="flex-none w-[340px] md:w-[420px] bg-[#121212] border border-stone-800 p-10 rounded-2xl"
+                className="flex-none w-[280px] xs:w-[300px] sm:w-[340px] md:w-[380px] lg:w-[420px] bg-[#121212] border border-stone-800 p-6 sm:p-8 md:p-10 rounded-xl sm:rounded-2xl"
               >
-                <p className="text-stone-300 mb-8 leading-relaxed font-light text-base">
+                <p className="text-stone-300 mb-6 sm:mb-8 leading-relaxed font-light text-sm sm:text-base">
                   "{testimonial.quote}"
                 </p>
-                <div className="flex items-center gap-4">
-                  <div className="relative w-14 h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-stone-700">
+                <div className="flex items-center gap-3 sm:gap-4">
+                  <div className="relative w-12 h-12 sm:w-14 sm:h-14 rounded-full overflow-hidden flex-shrink-0 ring-2 ring-stone-700">
                     <Image
                       src={testimonial.avatar}
                       alt={testimonial.author}
@@ -69,10 +69,10 @@ export function TestimonialsSection() {
                     />
                   </div>
                   <div>
-                    <p className="text-white font-bold text-base mb-1">
+                    <p className="text-white font-bold text-sm sm:text-base mb-1">
                       {testimonial.author}
                     </p>
-                    <p className="text-stone-500 text-sm">
+                    <p className="text-stone-500 text-xs sm:text-sm">
                       {testimonial.role}
                     </p>
                   </div>

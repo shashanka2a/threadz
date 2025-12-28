@@ -41,7 +41,7 @@ export function Navigation() {
             : "bg-transparent py-4 md:py-6"
         }`}
       >
-        <div className="max-w-7xl mx-auto px-4 md:px-8">
+        <div className="max-w-7xl mx-auto px-3 sm:px-4 md:px-8">
           <div className="flex items-center justify-between">
             {/* Left: Desktop Nav Links */}
             <div className="hidden md:flex items-center gap-8 text-[10px] uppercase tracking-[0.2em] font-bold">

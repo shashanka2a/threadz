@@ -34,7 +34,7 @@ export function TshirtDoodle() {
     >
       <div className="relative w-full h-full">
         <Image
-          src="/t-shirt.png"
+          src="/tshirt.png"
           alt="T-Shirt Doodle"
           fill
           className="object-cover object-center remove-bg"

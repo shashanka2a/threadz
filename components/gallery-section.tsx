@@ -63,7 +63,7 @@ export function GallerySection() {
           {[...galleryImages, ...galleryImages].map((img, i) => (
             <div
               key={i}
-              className="flex-none w-[200px] xs:w-[240px] sm:w-[280px] md:w-[320px] lg:w-[350px] aspect-[4/5] relative group cursor-pointer overflow-hidden rounded-lg border-2 border-stone-700/50 group-hover:border-stone-600/70 dark:group-hover:border-stone-500/70 transition-all duration-500 layer-shadow"
+              className="flex-none w-[200px] xs:w-[240px] sm:w-[280px] md:w-[320px] lg:w-[350px] aspect-[4/5] relative group cursor-pointer overflow-hidden rounded-lg border-2 border-stone-700/50 layer-shadow"
             >
               {/* Vignette overlay */}
               <div className="absolute inset-0 bg-gradient-radial from-transparent via-transparent to-black/40 z-10 pointer-events-none"></div>
@@ -72,13 +72,10 @@ export function GallerySection() {
                 src={img.url}
                 alt={img.title}
                 fill
-                className="object-cover grayscale brightness-70 contrast-110 group-hover:grayscale-0 group-hover:brightness-100 group-hover:contrast-100 transition-all duration-700"
+                className="object-cover brightness-100 contrast-100"
               />
               
-              {/* Border glow on hover */}
-              <div className="absolute inset-0 border-2 border-stone-500/0 group-hover:border-stone-500/20 dark:group-hover:border-stone-400/20 rounded-lg transition-all duration-500 pointer-events-none z-20"></div>
-              
-              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-all p-4 sm:p-6 md:p-8 flex flex-col justify-end z-30">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-black/60 to-transparent p-4 sm:p-6 md:p-8 flex flex-col justify-end z-30">
                 <p className="text-[8px] sm:text-[9px] uppercase tracking-widest font-bold text-stone-400 mb-1">
                   {img.creator}
                 </p>

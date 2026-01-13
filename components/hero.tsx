@@ -4,8 +4,6 @@ import { ArrowRight } from "lucide-react";
 import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { MagneticButton } from "@/components/magnetic-button";
-import { AnimatedIllustration } from "@/components/animated-illustration";
-import { TshirtDoodle } from "@/components/tshirt-doodle";
 
 export function Hero() {
   const heroRef = useRef<HTMLElement>(null);
@@ -18,16 +16,6 @@ export function Hero() {
       className="relative min-h-[85vh] sm:min-h-[90vh] flex items-center justify-center pt-20 sm:pt-24 px-4 sm:px-6 overflow-hidden"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,_rgba(0,0,0,0.02)_0%,_transparent_70%)] dark:bg-[radial-gradient(circle_at_center,_rgba(255,255,255,0.01)_0%,_transparent_70%)]" />
-
-      {/* Animated Illustration on Left - Hidden on very small screens */}
-      <div className="hidden xs:block absolute left-2 sm:left-4 md:left-8 lg:left-16 top-1/2 -translate-y-1/2 opacity-20 dark:opacity-15 sm:opacity-30 dark:sm:opacity-20 md:opacity-40 dark:md:opacity-30">
-        <AnimatedIllustration />
-      </div>
-
-      {/* T-Shirt Doodle on Right - Hidden on very small screens */}
-      <div className="hidden xs:block absolute right-2 sm:right-4 md:right-8 lg:right-16 top-1/2 -translate-y-1/2 pointer-events-none">
-        <TshirtDoodle />
-      </div>
 
       <div className="relative z-10 text-center max-w-4xl mx-auto w-full">
         <header className="mb-4 sm:mb-6">
